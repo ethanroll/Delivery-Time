@@ -13,14 +13,22 @@ public class CatNPC : MonoBehaviour, IInteractable
         {
             if (!InventoryManager.Instance.CheckItem(item)) // check each item
             {
-                Debug.Log("You are still missing some items. Please bring back the necessary items: Apple Pie, Bun Dish, Burger.");
+                DialogueManager.Instance.StartDialogue(new string[] {
+                    "I'm so hungry...", 
+                    "Oh, it seems that you are still missing some items.", 
+                    "Please bring back the necessary items: Apple Pie, Bun Dish, Burger." } );
+
+                //Debug.Log("You are still missing some items. Please bring back the necessary items: Apple Pie, Bun Dish, Burger.");
                 isMissing = true;
             }
         }
 
         if (isMissing != true)
         {
-            Debug.Log("Thank you for your service!~");
+            DialogueManager.Instance.StartDialogue(new string[] { 
+                "Thanks for the food, meow!" 
+            });
+            //Debug.Log("Thank you for your service!~");
         }
     }
 }
