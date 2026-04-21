@@ -7,7 +7,11 @@ public class KeyCollect : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("Key picked up");
-            InventoryManager.Instance.PickupKey();
+            //DialogueManager.Instance.StartDialogue(new string[] {
+            //    "Key picked up."
+           // } );
+
+           // InventoryManager.Instance.AddItem("Key");
             Destroy(gameObject); // remove key from scene
         }
     }

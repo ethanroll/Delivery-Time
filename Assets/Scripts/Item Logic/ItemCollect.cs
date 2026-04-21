@@ -6,7 +6,6 @@ public class ItemCollect : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            InventoryManager.Instance.PickupItem();
             Debug.Log(gameObject.name + " picked up");
             InventoryManager.Instance.items.Add(gameObject.name);
             Destroy(gameObject);
