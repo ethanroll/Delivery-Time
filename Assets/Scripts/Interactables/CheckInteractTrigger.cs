@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CheckInteract : MonoBehaviour
+public class CheckInteractTrigger : MonoBehaviour
 {
     public bool isPlayerNear = false;
 

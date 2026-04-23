@@ -1,10 +1,10 @@
 using UnityEngine;
 
-public class DoorLogic : MonoBehaviour
+public class DoorLogic : MonoBehaviour, IInteractable
 {
-    void OnCollisionEnter2D(Collision2D other)
+    public void Interact()
     {
-        if(other.gameObject.CompareTag("Player") && InventoryManager.Instance.CheckItem("Key"))
+        if (InventoryManager.Instance.CheckItem("Key"))
         {
             GetComponent<Collider2D>().isTrigger = true;
             InventoryManager.Instance.keyIcon.SetActive(false);

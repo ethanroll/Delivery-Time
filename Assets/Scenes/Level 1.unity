@@ -415,6 +415,7 @@ GameObject:
   - component: {fileID: 290388870}
   - component: {fileID: 290388873}
   - component: {fileID: 290388872}
+  - component: {fileID: 290388874}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -553,6 +554,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f8dae2282e28864e9ec84fba33d9a5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoorLogic
+--- !u!114 &290388874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290388869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd474d075f4520e41b8b6da9d6a21fd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CheckInteractCollision
+  isPlayerNear: 0
 --- !u!1 &297175236
 GameObject:
   m_ObjectHideFlags: 0
@@ -10678,9 +10692,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1328935889}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33b15b375502cf2438e076bbb3bf5112, type: 3}
+  m_Script: {fileID: 11500000, guid: bd474d075f4520e41b8b6da9d6a21fd8, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CheckInteract
+  m_EditorClassIdentifier: Assembly-CSharp::CheckInteractCollision
   isPlayerNear: 0
 --- !u!1 &1373980491
 GameObject:
