@@ -34,8 +34,10 @@ public class DialogueManager : MonoBehaviour
     public void NextLine()
     {
         currentIndex++;
-        if(currentIndex < lines.Length) // continue if lines are still found
+        Debug.Log("NextLine called, index: " + currentIndex + " length: " + lines.Length);
+        if (currentIndex < lines.Length) // continue if lines are still found
         {
+            Debug.Log("STILL LINES");
             dialogueText.text = lines[currentIndex];
         }
         else {
@@ -43,6 +45,7 @@ public class DialogueManager : MonoBehaviour
             dialoguePanel.SetActive(false);
             hasNextLine = false;
             isActive = false;
+            Debug.Log("NO LINES LEFT");
         }
     }
 }

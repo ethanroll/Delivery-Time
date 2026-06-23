@@ -8,8 +8,8 @@ public class CheckInteractTrigger : MonoBehaviour
     {
         if (isPlayerNear && PlayerInteract.interactPressed)
         {
-            if (DialogueManager.Instance.isActive) // keep going if more dialogue
-                DialogueManager.Instance.NextLine();
+            if (DialogueManager.Instance.isActive)  // keep going if more dialogue           
+                DialogueManager.Instance.NextLine();               
             else
                 GetComponent<IInteractable>().Interact(); // start interact
         }

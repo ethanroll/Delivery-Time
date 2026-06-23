@@ -4,7 +4,8 @@ using UnityEngine.InputSystem;
 public class PlayerInteract : MonoBehaviour
 {
     public static bool interactPressed;
-    
+
+
     private void OnInteract()
     {
         interactPressed = true;
@@ -14,4 +15,5 @@ public class PlayerInteract : MonoBehaviour
     {
         interactPressed = false; // stop from triggering repeatedly
     }
+
 }

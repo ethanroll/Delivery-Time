@@ -20,6 +20,8 @@ public class PlayerMovement: MonoBehaviour {
     private void FixedUpdate()
     {
         if (DialogueManager.Instance.isActive) return;
+
+        Debug.Log("FixedUpdate called");
         rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
     }
 }
